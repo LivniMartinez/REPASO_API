@@ -49,7 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
               row.appendChild(imagenCell);
   
               tablaResultados.appendChild(row);
+  
+              // Mostrar los datos en la consola
+              console.log(`id: ${personaje.id}`);
+              console.log(`Nombre: ${personaje.name}`);
+              console.log(`Especie: ${personaje.species}`);
+              console.log(`Género: ${personaje.gender}`);
+              console.log(`Estado: ${personaje.status}`);
+              console.log(`Imagen: ${personaje.image}`);
+              
             });
+  
             estado.innerText = `Mostrando ${resultados.length} personaje(s)`;
           }
         } else {
@@ -58,6 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (error) {
         estado.innerText = 'Error en la consulta a la API';
         console.log(error);
-      }
-    });
-  });
+      }
+    });
+  });
